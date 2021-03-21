@@ -16,9 +16,11 @@ class MainAdapter(
         fun bind(book: BookModel) {
             itemView.textViewBookName.text = book.title
 
-            if (!book.completed){
-                itemView.completedIcon.setImageResource(R.drawable.ic_baseline_wrong_24)
+            if (book.completed){
+                itemView.completedIcon.setImageResource(R.drawable.ic_baseline_check_24)
             }
+            else
+                itemView.completedIcon.setImageResource(R.drawable.ic_baseline_wrong_24)
         }
     }
 
